@@ -12,12 +12,16 @@ module.exports = {
         type:Sequelize.STRING(120),
         allowNull:false
       },
+      email:{
+        type:Sequelize.STRING(120),
+        allowNull:false
+      },
       password:{
         type:Sequelize.STRING(255),
         allowNull:false
       },
-      create_at:Sequelize.DATE,
-      update_at:Sequelize.DATE,
+      createdAt:Sequelize.DATE,
+      updatedAt:Sequelize.DATE,
     });
   },
   down: async (queryInterface, Sequelize) => {
