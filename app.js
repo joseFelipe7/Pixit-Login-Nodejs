@@ -10,6 +10,7 @@ const loginRouter = require('./routes/loginRoute');
 const homeRouter = require('./routes/homeRoute');
 const forgoutRouter = require('./routes/forgoutPassRoute');
 const apiLoginRouter = require('./routes/api/login')
+const apiForgoutRouter = require('./routes/api/forgoutPass')
 
 const app = express();
 
@@ -37,6 +38,9 @@ app.use('/recuperar-senha', forgoutRouter);
 
 //consultas dinamicas
 app.use('/api/login', apiLoginRouter);
+app.use('/api/forgout', apiForgoutRouter);
+
+
 
 
 // catch 404 and forward to error handler

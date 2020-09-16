@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+button:focus{
+  outline:none
+}
 body{
   background:  linear-gradient(111.27deg, #DBDBDB 48.32%, #EFFAFF 93.97%);
   font-family: 'Roboto', sans-serif;
@@ -206,6 +209,33 @@ body{
 .container-input-modal{
   margin-top: 20px;
 
+}
+.alert-modal{
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  width: 60%;
+  height: 70%;
+  border-radius: 4px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color:  #52C5B8;
+  box-shadow: 5px 5px 12px #263446;
+}
+.alert-modal p{
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+.alert-modal.active{
+  display: flex;
+}
+.alert-modal .close-modal{
+  position: absolute;
+  top: 6px;
+  right: 15px;
 }
 .input-modal{
   border: none;

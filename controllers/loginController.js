@@ -29,12 +29,12 @@ module.exports = {
         })
         if(user){
             if(bcrypt.compareSync(pass, user.password) && !user){
-                res.status(200).json({found:true, menssage:'Usúario encontrado'})
+                res.status(200).json({found:true, menssage:'Usúario encontrado', status:"ok"})
             }else{
-                res.status(400).json({found:false, menssage:'Email ou senha invalidos'})
+                res.status(400).json({found:false, menssage:'Email ou senha invalidos', status:"error"})
             }
         }else{
-            res.status(400).json({found:false, menssage:'Email ou senha invalidos'})
+            res.status(400).json({found:false, menssage:'Email ou senha invalidos', status:"error"})
         }
     }
 }
