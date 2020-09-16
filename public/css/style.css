@@ -18,7 +18,6 @@ body{
 }
 .container-form{
   display: flex;
-  background-color: aqua;
   max-width: 700px;
   border-radius: 10px;
   height: 500px;
@@ -159,6 +158,7 @@ body{
 .container-input-check small a:hover{
   color: #eeeeee;
 }
+
 .alert{
   position: fixed;
   background: #51637A;
@@ -275,4 +275,67 @@ body{
 .btn-recuperar-senha:hover{
   color: #52C5B8;
   background-color: #ffffff;
+}
+
+.container-form-forgout{
+  flex-direction: column;
+  height: 100%;
+  max-height: 500px;
+  min-height: 500px;
+  max-width: 420px;
+  border-radius: 5px;
+  width: 100%;
+}
+.bottom-form-forgout{
+  flex: none;
+  height: 35%;
+  width: 100%;
+  background-color: #59D9CA;
+  border-radius: 0px 0px 5px 5px ;
+
+}
+.top-form-forgout{
+  flex: none;
+  height: 65%;
+  width: 100%;
+  background:linear-gradient(180deg, #53657C 0.52%, #394B62 42.49%, #233041 100%);
+  padding-top: 40px;
+  border-radius: 5px 5px 0px 0px ;
+
+}
+
+.title-left-forgout{
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.title-left-forgout span{
+  text-decoration: none;
+  padding-left: 45px;
+  color: #6E7887;
+  display: flex;
+  align-items: center;
+}
+.title-left-forgout span{
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 0px 25px 25px 0px;
+  background-color: #52C5B8;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+}
+.bottom-form-forgout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bottom-form-forgout img{
+  width: 140px;
+  border-radius: 10px;
+}
+.bottom-form-forgout p{
+  color: #209386;
 }
