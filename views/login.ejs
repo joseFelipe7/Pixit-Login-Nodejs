@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+<%- include('includes/head.ejs',{title:'Login'}) %> 
 <body>
     <div class="align-form">
         <main class="container-form">
@@ -32,7 +27,7 @@
                         </div>
                         <div class="container-input-check">
                             <button type="button" class="btn-entrar" id="btn-logar">Entrar</button>
-                            <small><a href="">Esqueci minha senha</a></small>
+                            <small><a href="" data-toggle="modal" data-target="#modal-esqueci-senha">Esqueci minha senha</a></small>
                         </div>
                     </div>
                 </form>
@@ -42,6 +37,32 @@
     <div class="alert" id="alert">
         
     </div>
+    <!-- Modal esqueci minha senha -->
+  <div class="modal fade" id="modal-esqueci-senha" tabindex="-1" role="dialog"aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content modal-content-style">
+        <div class="modal-body modal-body-style">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            <h3>Esqueci minha senha</h3>
+            <small>Será enviado um email para a recuperação de senha</small>
+            <div class="container-input-modal">
+                <input type="email" placeholder="Digite seu email" class="input-modal" id="recovery-input">
+            </div>  
+            <button type="button" id="btn-recovery" class="btn-recuperar-senha">Recuperar senha</button>
+
+            <div class="alert-modal" id="alert-modal">
+                
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+<%- include('includes/scripts.ejs') %> 
 <script src="/js/loginScript.js"></script>
+<script src="/js/esqueciSenhaScript.js"></script>
+
 </html>
