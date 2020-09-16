@@ -11,6 +11,7 @@ const homeRouter = require('./routes/homeRoute');
 const forgoutRouter = require('./routes/forgoutPassRoute');
 const apiLoginRouter = require('./routes/api/login')
 const apiForgoutRouter = require('./routes/api/forgoutPass')
+const apiRegisterRouter = require('./routes/api/register')
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use('/recuperar-senha', forgoutRouter);
 //consultas dinamicas
 app.use('/api/login', apiLoginRouter);
 app.use('/api/forgout', apiForgoutRouter);
+app.use('/api/register', apiRegisterRouter);
 
 
 

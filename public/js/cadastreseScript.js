@@ -1,27 +1,29 @@
-const formLogin = document.querySelector('#form-login')
-const btnLogar = document.querySelector('#btn-logar')
+
+const formCadastrese = document.querySelector('#form-cadastrese')
+const btnCadastrase = document.querySelector('#btn-cadastrase')
+const inputName = document.querySelector('#input-name')
 const inputEmail = document.querySelector('#input-email')
 const inputPass = document.querySelector('#input-pass')
 const alert = document.querySelector('#alert')
 
-btnLogar.addEventListener('click',async ()=>{
+btnCadastrase.addEventListener('click',async ()=>{
     const email = inputEmail.value
     const pass = inputPass.value
+    const name = inputName.value
     const config = {
         headers: {
             'Content-Type': 'application/json'
         },
         body:JSON.stringify({
-            email,
-            pass
+            email
         }),
         method:'POST'
     }
-    if(email != '' && pass != ''){
-        const resposta = await fetch('http://localhost:3000/api/login/verifiy', config)
+    if(email != '' && pass != '' && name != ''){
+        const resposta = await fetch('http://localhost:3000/api/register/verify', config)
         const verify = await resposta.json()
-        if(verify.found){
-            formLogin.submit()
+        if(verify.status == "ok"){
+            formCadastrese.submit()
         }else{
             alert.innerHTML = `
             <div class="icon">
@@ -30,7 +32,7 @@ btnLogar.addEventListener('click',async ()=>{
             <img src="/img/close.svg" class="close-icon" alt="">
             <div class="body">
                 <p id="alert-menssagem">
-                    Email ou senha incorretos
+                    Email já ultilizado
                 </p>
             </div>
             `

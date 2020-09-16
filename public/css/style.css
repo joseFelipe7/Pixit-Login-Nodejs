@@ -133,7 +133,7 @@ body{
 .input-default::placeholder{
   color: #6E7887;
 }
-.btn-entrar{
+.btn-entrar, .btn-cadastrase{
   background-color: #52C5B8;
   border: none;
   border-radius: 15px;
@@ -145,6 +145,9 @@ body{
   margin-right: 10px;
   cursor: pointer;
   transition: 0.3s;
+}
+.btn-cadastrase{
+  width: 120px;
 }
 .btn-entrar:hover{
   color: #52C5B8;

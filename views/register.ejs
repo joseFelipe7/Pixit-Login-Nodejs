@@ -34,29 +34,32 @@
                     <a href="/login" class="left">Login</a>
                     <a href="/cadastre-se" class="right active">Cadastre-se</a>
                 </div>
-                <form method="POST">
+                <form method="POST" id="form-cadastrese">
                     <div class="form-input-container">
                         <div class="container-input">
                             <label for="">Nome</label>
-                            <input type="text" name="name" class="input-default" placeholder="Digite Seu nome completo">
+                            <input type="text" name="name" id="input-name" class="input-default" placeholder="Digite Seu nome completo">
                         </div>
                         <div class="container-input">
                             <label for="">Email</label>
-                            <input type="email" name="email" class="input-default" placeholder="pixit@email.com">
+                            <input type="email" name="email" id="input-email" class="input-default" placeholder="pixit@email.com">
                         </div>
                         <div class="container-input">
                             <label for="">Senha</label>
-                            <input type="password" name="pass" class="input-default" placeholder="Digite sua senha">
+                            <input type="password" name="pass" id="input-pass" class="input-default" placeholder="Digite sua senha">
                         </div>
                         <div class="container-input-check">
-                            <button class="btn-entrar" >Cadastrar</button>
+                            <button class="btn-cadastrase" type="button" id="btn-cadastrase" >Cadastrar-se</button>
                             <small><a href="" data-toggle="modal" data-target="#modal-esqueci-senha">Esqueci minha senha</a></small>
                         </div>
                     </div>
                 </form>
             </div>
 
-    </main>
+        </main>
+    </div>
+    <div class="alert" id="alert">
+            
     </div>
 
   <!-- Modal esqueci minha senha -->
@@ -82,6 +85,6 @@
     </div>
   </div>
 
-  <script src="/js/esqueciSenhaScript.js"></script>
+  <script src="/js/cadastreseScript.js"></script>
 </body>
 </html>

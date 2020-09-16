@@ -15,5 +15,16 @@ module.exports = {
         })
         res.render('register')
         return;
+    },
+    verify:async(req,res)=>{
+        const { email } = req.body
+        const user = await User.findOne({
+            where:{
+                email
+            }
+        });
+        !user ?
+        res.status(200).json({menssage:'Email disponivel', status:"ok"}) : 
+        res.status(400).json({menssage:'Email indisponivel', status:"error"})
     }
 }
