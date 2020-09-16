@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="/css/style.css">
-
-
-
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -60,12 +59,7 @@
     </main>
     </div>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" >
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
+  <!-- Modal esqueci minha senha -->
   <div class="modal fade" id="modal-esqueci-senha" tabindex="-1" role="dialog"aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content modal-content-style">
@@ -76,12 +70,14 @@
             <h3>Esqueci minha senha</h3>
             <small>Será enviado um email para a recuperação de senha</small>
             <div class="container-input-modal">
-                <input type="email" placeholder="Digite seu email" class="input-modal" id="recovery">
+                <input type="email" placeholder="Digite seu email" class="input-modal" id="recovery-input">
             </div>  
-            <button type="button" class="btn-recuperar-senha">Recuperar senha</button>
+            <button type="button" id="btn-recovery" class="btn-recuperar-senha">Recuperar senha</button>
         </div>
       </div>
     </div>
   </div>
+
+  <script src="/js/esqueciSenhaScript.js"></script>
 </body>
 </html>
