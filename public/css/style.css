@@ -4,7 +4,7 @@ body{
   background:  linear-gradient(111.27deg, #DBDBDB 48.32%, #EFFAFF 93.97%);
   font-family: 'Roboto', sans-serif;
   background-size: cover;
-
+  margin: 0;
 }
 .align-form{
   width: 100%;
@@ -42,7 +42,7 @@ body{
   width: 220px;
 }
 .rigth-form{
-  background: linear-gradient(180deg, #394B63 0%, #233041 72.92%);
+  background: linear-gradient(180deg, #53657C 0.52%, #394B62 42.49%, #233041 100%);
   border-radius: 0px 10px 10px 0px;
   /* display: flex;
   flex-direction: column;
@@ -155,5 +155,36 @@ body{
 }
 .container-input-check small a:hover{
   color: #eeeeee;
+}
+.alert{
+  position: fixed;
+  background: #51637A;
+  color: #ffffff;
+  width: 300px;
+  height: 200px;
+  bottom: 16px;
+  right: 16px;
+  box-shadow: 5px 5px 16px #222222;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  opacity: 0;
+  transition: 0.6s;
+  display: none;
+}
+.alert.active{
+  display: flex;
 
+}
+.alert .icon img{
+  width: 50px;
+}
+.alert .close-icon{
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
 }
