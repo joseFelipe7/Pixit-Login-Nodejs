@@ -8,6 +8,7 @@ const session = require('express-session');
 const registerRouter = require('./routes/registerRouter');
 const loginRouter = require('./routes/loginRoute');
 const homeRouter = require('./routes/homeRoute');
+const apiLoginRouter = require('./routes/api/login')
 
 const app = express();
 
@@ -31,6 +32,9 @@ app.use(session({
 app.use('', homeRouter)
 app.use('/cadastre-se', registerRouter);
 app.use('/login', loginRouter);
+
+//consultas dinamicas
+app.use('/api/login', apiLoginRouter);
 
 
 // catch 404 and forward to error handler

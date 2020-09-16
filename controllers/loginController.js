@@ -16,7 +16,21 @@ module.exports = {
             req.session.userLogged = user
             res.redirect('/home')
         }else{
-            console.log('não logou')
+            res.redirect('/login')
+        }
+        
+    },
+    verify:async (req,res)=>{
+        const {email, pass} = req.body
+        const user = await User.findOne({
+            where:{
+                email
+            }
+        })
+        if(bcrypt.compareSync(pass, user.password)){
+            res.status(200).json({found:true, menssage:'Usúario encontrado'})
+        }else{
+            res.status(200).json({found:false, menssage:'Email ou senha invalidos'})
         }
         
     }
