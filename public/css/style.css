@@ -188,3 +188,61 @@ body{
   top: 5px;
   cursor: pointer;
 }
+
+.modal-content-style{
+  background-color: #263446!important;
+}
+.modal-body-style{
+  background-color: #263446;
+  border-radius: 2px;
+}
+.modal-body-style small{
+  color:#6E7887;
+}
+.modal-body-style h3{
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+.container-input-modal{
+  margin-top: 20px;
+
+}
+.input-modal{
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #52C5B8;
+  margin-bottom: 15px;
+  color: #ffffff;
+  width: 100%;
+}
+.input-modal:focus{
+  outline: none;
+}
+.input-modal::placeholder{
+  color:#6E7887
+}
+.close-modal{
+  float: right;
+  border: none;
+  background: transparent;
+}
+.close-modal span{
+  font-size: 18px;
+}
+.btn-recuperar-senha{
+  background-color: #52C5B8;
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 4px 4px 12px #2B2B2B;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-recuperar-senha:hover{
+  color: #52C5B8;
+  background-color: #ffffff;
+}
