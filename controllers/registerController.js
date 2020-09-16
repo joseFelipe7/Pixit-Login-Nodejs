@@ -6,9 +6,9 @@ module.exports = {
         res.render('register')
         return;
     },
-    store:(req,res)=>{
+    store:async (req,res)=>{
         const {name, email, pass} = req.body;    
-        User.create({
+        await User.create({
             name,
             email,
             password:bcrypt.hashSync(pass, 10)

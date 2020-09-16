@@ -3,8 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
 
 const registerRouter = require('./routes/registerRouter');
+const loginRouter = require('./routes/loginRoute');
+const homeRouter = require('./routes/homeRoute');
 
 const app = express();
 
@@ -17,8 +20,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//configutando session
+app.use(session({
+  secret:'8f8b55b5c9fcc5da13f45c273a066b48',
+  resave:true,
+  saveUninitialized:true
+}));
 
+//rotas
+app.use('', homeRouter)
 app.use('/cadastre-se', registerRouter);
+app.use('/login', loginRouter);
 
 
 // catch 404 and forward to error handler
