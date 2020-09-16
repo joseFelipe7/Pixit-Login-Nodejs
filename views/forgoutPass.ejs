@@ -13,19 +13,21 @@
                 <div class="title-left-forgout">
                     <span>Recuperação <br>de senha</span>
                 </div>
-                <form method="POST">
+                <form method="POST" action="/recuperar-senha">
                     <div class="form-input-container">
                         <div class="container-input">
                             <label for="">Nova senha</label>
-                            <input type="text" name="name" class="input-default" placeholder="Digite uma nova senha">
+                            <input type="password" name="pass" class="input-default" placeholder="Digite uma nova senha">
                         </div>
                         <div class="container-input">
                             <label for="">Confirme a nova senha</label>
-                            <input type="password" name="pass" class="input-default" placeholder="Confirme sua senha">
+                            <input  type="password" name="confirmpass" class="input-default" placeholder="Confirme sua senha">
                         </div>
+                        <input type="number" name="idUser" hidden value="<%=idUser%>">
+                        <input type="text" name="hash"hidden value="<%=hash%>">
                         <div class="container-input-check">
                             <button class="btn-entrar" >Confirmar</button>
-                            <small><a href="/login" data-toggle="modal" data-target="#modal-esqueci-senha">Fazer login</a></small>
+                            <small><a href="/login">Fazer login</a></small>
                         </div>
                     </div>
                 </form>

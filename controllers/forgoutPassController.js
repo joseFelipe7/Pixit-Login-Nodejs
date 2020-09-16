@@ -26,7 +26,7 @@ module.exports = {
                 to: email, //email do usuario
                 subject: 'Alteração de Senha',
                 text:'ola',
-                html:`<p>clique <a href="http://localhost:3000/login/${hash}">aqui</a> para redefinir senha:</p>`
+                html:`<p>clique <a href="http://localhost:3000/recuperar-senha/${hash}">aqui</a> para redefinir senha:</p>`
             }
             //envio do email
             emailConfig.sendMail(envioEmail, (error) => {
@@ -41,5 +41,37 @@ module.exports = {
         }else{
             res.status(400).json({menssage:'Email não encontrado', status:"error"})
         }
+    },
+    edit:async (req,res)=>{
+        const { hash } = req.params
+        const token = await Token.findOne({
+            where:{
+                hash
+            },
+            include:{
+                model:User,
+                as:'user'
+            }
+        })
+        res.render('forgoutPass',{idUser:token.user.id, hash})
+    },
+    update:async (req,res)=>{
+        const { pass, idUser, hash } = req.body
+        const token = await Token.findOne({
+            where:{
+                hash,
+                fk_user:idUser,
+                use:0
+            }
+        })
+        console.log(token)
+        if(token){
+            const user = await User.findByPk(idUser)
+            user.password = bcrypt.hashSync(pass, 10)
+            await user.save()
+            token.use = true
+            await token.save()
+        }
+        res.send('atualizou senha')
     }
 }
