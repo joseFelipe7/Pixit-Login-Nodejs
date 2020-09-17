@@ -19,17 +19,7 @@ btnRecovery.addEventListener('click',async()=>{
         const resposta = await fetch('http://localhost:3000/api/forgout', config)
         const respostaJson = await resposta.json()
         if(respostaJson.status == "ok"){
-            alertModal.innerHTML = `
-                <div class="icon">
-                    <img src="/img/icon-exclamacao.png" alt="">
-                </div>
-                <img src="/img/close.svg" class="close-icon" alt="">
-                <div class="body">
-                    <p id="alert-menssagem">
-                        Email ou senha incorretos
-                    </p>
-                </div>
-            `
+            alertModal.innerHTML = `<button type="button" class="close-modal" id="close-modal-alert"><span aria-hidden="true">&times;</span></button><p>Um email foi enviado para ${email} acesse seu email para recuperar senha </p>`
             alertModal.classList.add('active')
             setTimeout(()=>{
                 alertModal.classList.remove('active')

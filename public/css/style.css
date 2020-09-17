@@ -301,6 +301,7 @@ body{
 .top-form-forgout{
   flex: none;
   height: 65%;
+  min-height: 380px;
   width: 100%;
   background:linear-gradient(180deg, #53657C 0.52%, #394B62 42.49%, #233041 100%);
   padding-top: 40px;
@@ -433,4 +434,5 @@ nav{
 }
 .figure-home{
   max-width: 700px;
+  width: 100%;
 }
