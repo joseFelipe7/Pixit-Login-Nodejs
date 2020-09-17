@@ -436,3 +436,27 @@ nav{
   max-width: 700px;
   width: 100%;
 }
+
+@media (max-width:724px){
+  .left-form{
+    flex: none;
+    width: 120px;
+  }
+  .container-form{
+    max-width: 500px;
+  }
+  .left-form .frase-left{
+    display: none;
+  }
+  .left-form img{
+    transform: rotate(-90deg);
+  }
+  .right-form{
+    flex: none;
+    width: 300px;
+  }
+  .form-input-container{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

@@ -13,7 +13,7 @@ module.exports = {
             email,
             password:bcrypt.hashSync(pass, 10)
         })
-        res.render('register')
+        res.render('register',{ cad:true })
         return;
     },
     verify:async(req,res)=>{
