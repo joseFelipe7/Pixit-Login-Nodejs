@@ -1,19 +1,23 @@
 # Sistema de casdastro/login de usuário - Pixit
 
-Projeto criado em... 
-JavaScript
-EJS
-HTML5/CSS3
-Node.JS
-Nodemon
-Express
-Express-session
-Middleware
-Nodemailer
-Bcrypt
-MySQL2
-Sequelize
-Sequelize-cli
+#### `Projeto criado em...`  
+JavaScript  
+HTML5/CSS3  
+Node.JS  
+Express  
+mysql  
+  
+#### `Dependencias usadas`  
+Express  
+EJS  
+Nodemon  
+Express-session  
+Middleware  
+Nodemailer  
+Bcrypt  
+MySQL2  
+Sequelize  
+Sequelize-cli  
 
 ## Sobre o projeto...
 • Cadastro de usuário
@@ -25,9 +29,20 @@ Sequelize-cli
 
  bash
 ### `Para executar o projeto na sua máquina...`
-npm install
-npx sequelize db:create
-npx sequelize db:migrate
+npm install  
+npx sequelize db:create  
+npx sequelize db:migrate  
+npx nodemon bin/www  
+  
+O projeto sera executado na porta 3000
+
+##### Rotas Acessíveis 
+http://localhost:3000/home  
+http://localhost:3000/login  
+http://localhost:3000/cadastre-se  
+http://localhost:3000/area-usuario  
+http://localhost:3000/recuperar-senha  
+
 
 ## Commits no padrão...
 ``` bash
