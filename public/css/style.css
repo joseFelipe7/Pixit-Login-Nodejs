@@ -307,6 +307,10 @@ body{
 
 }
 
+.form-input-container .alert-forgout{
+  color: #fff;
+  text-align: center;
+}    
 .title-left-forgout{
   margin-bottom: 40px;
   display: flex;

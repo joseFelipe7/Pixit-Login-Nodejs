@@ -53,7 +53,11 @@ module.exports = {
                 as:'user'
             }
         })
-        res.render('forgoutPass',{idUser:token.user.id, hash})
+        if(token.use == false){
+            res.render('forgoutPass',{idUser:token.user.id, hash, used:false})
+        }else{
+            res.render('forgoutPass',{erro:"esse token é invalido ou ja foi usado", used:true})
+        }
     },
     update:async (req,res)=>{
         const { pass, idUser, hash } = req.body
@@ -64,14 +68,13 @@ module.exports = {
                 use:0
             }
         })
-        console.log(token)
         if(token){
             const user = await User.findByPk(idUser)
             user.password = bcrypt.hashSync(pass, 10)
             await user.save()
             token.use = true
             await token.save()
+            res.render('forgoutPass',{used:true, menssege:"Sua senha foi trocada com sucesso"})
         }
-        res.send('atualizou senha')
     }
 }

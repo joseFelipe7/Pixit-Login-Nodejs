@@ -20,9 +20,19 @@ btnRecovery.addEventListener('click',async()=>{
         const respostaJson = await resposta.json()
         console.log(respostaJson)
         if(respostaJson.status == "ok"){
-            alertModal.innerHTML = `<button type="button" class="close-modal" id="close-modal-alert"><span aria-hidden="true">&times;</span></button><p>Um email foi enviado para ${email} acesse seu email para recuperar senha </p>`
+            alertModal.innerHTML = `
+                <div class="icon">
+                    <img src="/img/icon-exclamacao.png" alt="">
+                </div>
+                <img src="/img/close.svg" class="close-icon" alt="">
+                <div class="body">
+                    <p id="alert-menssagem">
+                        Email ou senha incorretos
+                    </p>
+                </div>
+            `
             alertModal.classList.add('active')
-            interval = setTimeout(()=>{
+            setTimeout(()=>{
                 alertModal.classList.remove('active')
             },7000)
         }else{
