@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('includes/head.ejs',{title:'Login'}) %> 
+<%- include('includes/head.ejs',{title:'Login'}) %>
+
 <body>
-    <%- include('includes/header.ejs') %> 
+    <%- include('includes/header.ejs') %>
     <div class="align-form">
         <main class="container-form">
             <div class="left-form">
@@ -16,19 +17,22 @@
                     <a href="/login" class="left active">Login</a>
                     <a href="/cadastre-se" class="right">Cadastre-se</a>
                 </div>
-                <form method="POST" id="form-login" >
+                <form method="POST" id="form-login">
                     <div class="form-input-container">
                         <div class="container-input">
                             <label for="">Email</label>
-                            <input type="email" name="email" id="input-email" class="input-default" placeholder="pixit@email.com">
+                            <input type="email" name="email" id="input-email" class="input-default"
+                                placeholder="pixit@email.com">
                         </div>
                         <div class="container-input">
                             <label for="">Senha</label>
-                            <input type="password" name="pass" id="input-pass" class="input-default" placeholder="Digite sua senha">
+                            <input type="password" name="pass" id="input-pass" class="input-default"
+                                placeholder="Digite sua senha">
                         </div>
                         <div class="container-input-check">
                             <button type="button" class="btn-entrar" id="btn-logar">Entrar</button>
-                            <small><a href="" data-toggle="modal" data-target="#modal-esqueci-senha">Esqueci minha senha</a></small>
+                            <small><a href="" data-toggle="modal" data-target="#modal-esqueci-senha">Esqueci minha
+                                    senha</a></small>
                         </div>
                     </div>
                 </form>
@@ -36,33 +40,33 @@
         </main>
     </div>
     <div class="alert" id="alert">
-        
+
     </div>
     <!-- Modal esqueci minha senha -->
-  <div class="modal fade" id="modal-esqueci-senha" tabindex="-1" role="dialog"aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content modal-content-style">
-        <div class="modal-body modal-body-style">
-            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            <h3>Esqueci minha senha</h3>
-            <small>Será enviado um email para a recuperação de senha</small>
-            <div class="container-input-modal">
-                <input type="email" placeholder="Digite seu email" class="input-modal" id="recovery-input">
-            </div>  
-            <button type="button" id="btn-recovery" class="btn-recuperar-senha">Recuperar senha</button>
+    <div class="modal fade" id="modal-esqueci-senha" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-style">
+                <div class="modal-body modal-body-style">
+                    <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3>Esqueci minha senha</h3>
+                    <small>Será enviado um email para a recuperação de senha</small>
+                    <div class="container-input-modal">
+                        <input type="email" placeholder="Digite seu email" class="input-modal" id="recovery-input">
+                    </div>
+                    <button type="button" id="btn-recovery" class="btn-recuperar-senha">Recuperar senha</button>
 
-            <div class="alert-modal" id="alert-modal">
-                
+                    <div class="alert-modal" id="alert-modal">
+
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
 
 </body>
-<%- include('includes/scripts.ejs') %> 
+<%- include('includes/scripts.ejs') %>
 <script src="/js/loginScript.js"></script>
 <script src="/js/esqueciSenhaScript.js"></script>
 

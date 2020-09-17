@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('includes/head.ejs', {title:'Recuperar-senha'}) %> 
+<%- include('includes/head.ejs', {title:'Recuperar-senha'}) %>
 
 <body>
-    <%- include('includes/header.ejs') %> 
+    <%- include('includes/header.ejs') %>
     <div class="align-form">
         <main class="container-form-forgout">
             <div class="top-form-forgout">
@@ -15,28 +15,30 @@
                     <div class="form-input-container">
                         <div class="container-input">
                             <label for="">Nova senha</label>
-                            <input type="password" name="pass" id="pass" class="input-default" placeholder="Digite uma nova senha">
+                            <input type="password" name="pass" id="pass" class="input-default"
+                                placeholder="Digite uma nova senha">
                         </div>
                         <div class="container-input">
                             <label for="">Confirme a nova senha</label>
-                            <input  type="password" name="confirmpass" id="confirmpass" class="input-default" placeholder="Confirme sua senha">
+                            <input type="password" name="confirmpass" id="confirmpass" class="input-default"
+                                placeholder="Confirme sua senha">
                         </div>
                         <input type="number" name="idUser" hidden value="<%=idUser%>">
-                        <input type="text" name="hash"hidden value="<%=hash%>">
+                        <input type="text" name="hash" hidden value="<%=hash%>">
                         <div class="container-input-check">
-                            <button class="btn-entrar" id="btn-newsenha" type="button" >Confirmar</button>
+                            <button class="btn-entrar" id="btn-newsenha" type="button">Confirmar</button>
                             <small><a href="/login">Fazer login</a></small>
                         </div>
                     </div>
                 </form>
                 <% }else{ %>
-                    <div class="form-input-container">
-                        <% if(typeof menssege != "undefined"){ %>
-                            <p class="alert-forgout"><%=menssege%></p>
-                        <% }else{ %>
-                             <p class="alert-forgout">Este token é invalido ou já foi ultilizado</p>
-                        <% } %>
-                    </div>
+                <div class="form-input-container">
+                    <% if(typeof menssege != "undefined"){ %>
+                    <p class="alert-forgout"><%=menssege%></p>
+                    <% }else{ %>
+                    <p class="alert-forgout">Este token é invalido ou já foi ultilizado</p>
+                    <% } %>
+                </div>
                 <%}%>
             </div>
             <div class="bottom-form-forgout">
@@ -51,7 +53,8 @@
     </div>
 </body>
 
-<%- include('includes/scripts.ejs') %> 
+<%- include('includes/scripts.ejs') %>
 
 <script src="/js/forgoutScript.js"></script>
+
 </html>
