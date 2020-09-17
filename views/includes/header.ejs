@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark nav-style ">
+        <h1 class="title-header"><a href="/home"><img height="40" src="/img/logo.png" alt=""></a></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="    justify-content: flex-end">
+            <div class="navbar-nav nav-header">
+                <% if(typeof user == "undefined"){ %>
+                    <li class="nav-item nav-link"><a href="/login">Logar</a></li>
+                    <li class="nav-item nav-link"><a href="/cadastre-se">Cadastre-se</a></li>
+                <% }else{ %>
+                    <li class="nav-item nav-link"><a><%=user.name%></a></li>
+                    <li class="nav-item nav-link"><a href="/deslogar">Deslogar</a></li>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+</header>

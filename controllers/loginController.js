@@ -14,7 +14,7 @@ module.exports = {
         })
         if(bcrypt.compareSync(pass, user.password)){
             req.session.userLogged = user
-            res.redirect('/home')
+            res.redirect('/area-usuario')
         }else{
             res.redirect('/login')
         }

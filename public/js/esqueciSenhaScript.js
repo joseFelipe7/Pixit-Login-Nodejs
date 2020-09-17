@@ -18,7 +18,6 @@ btnRecovery.addEventListener('click',async()=>{
     if(email != ''){
         const resposta = await fetch('http://localhost:3000/api/forgout', config)
         const respostaJson = await resposta.json()
-        console.log(respostaJson)
         if(respostaJson.status == "ok"){
             alertModal.innerHTML = `
                 <div class="icon">
