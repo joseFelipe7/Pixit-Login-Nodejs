@@ -36,5 +36,9 @@ module.exports = {
         }else{
             res.status(400).json({found:false, menssage:'Email ou senha invalidos', status:"error"})
         }
+    },
+    logout:(req,res)=>{
+        req.session.destroy();
+        res.redirect('/home')
     }
 }
